@@ -41,28 +41,11 @@ We have compiled a list of essential links and resources to support your learnin
 - [Paper: Reciprocal Frame Structures Made Easy](https://sutd-cgl.github.io/supp/Publication/papers/2013-SIGGRAPH-RFStructure.pdf), Peng Song et al.
 - [Reciprocal Frames - Tradition and Innovation](https://archive.arch.ethz.ch/verlag/publications/hebelstabwerke--reciprocal-frameworks.html), Udo Thönnissen
 
-
-### Rhino
-
-- [Rhino User Guide](https://docs.mcneel.com/rhino/7/usersguide/en-us/index.htm)
-- [Rhino Command List for 3D Modelling](https://docs.mcneel.com/rhino/7/help/en-us/commandlist/command_list.htm)
-- [RhinoScript Syntax](https://developer.rhino3d.com/api/RhinoScriptSyntax/)
-- [RhinoCommon API](https://developer.rhino3d.com/api/rhinocommon/)
-- [Rhino Python Guide](https://developer.rhino3d.com/guides/rhinopython/)
-- [Rhino Python 101 Primer](https://www.rhino3d.com/download/IronPython/6.0/RhinoPython101/)
-- [Rhino Basics](https://gramaziokohler.arch.ethz.ch/teaching-materials/02_rhino/)
-
-### Grasshopper
-
-- [Grasshopper Docs](https://grasshopperdocs.com)
-- [Grasshopper Basics](https://gramaziokohler.arch.ethz.ch/teaching-materials/03_grasshopper/)
-- [Grasshopper Python Basics](https://gramaziokohler.arch.ethz.ch/teaching-materials/04_python/)
-
 ### Python
 
 - [Python 3.9 Reference](https://docs.python.org/3.9/)
 - [Python Roadmap](https://roadmap.sh/python)
-- [Python Cheat Sheet](https://learnxinyminutes.com/docs/pythonlegacy/)
+- [Python Cheat Sheet](https://learnxinyminutes.com/docs)
 
 ### COMPAS
 
