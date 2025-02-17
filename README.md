@@ -36,7 +36,9 @@ We have compiled a list of essential links and resources to support your learnin
 
 ### Foundational Material
 
-- [GKR Teaching Material](https://gramaziokohler.arch.ethz.ch/teaching-materials/)
+- [Paper: Reciprocal Frame Structures Made Easy](https://sutd-cgl.github.io/supp/Publication/papers/2013-SIGGRAPH-RFStructure.pdf), Peng Song et al.
+- [Reciprocal Frames - Tradition and Innovation](https://archive.arch.ethz.ch/verlag/publications/hebelstabwerke--reciprocal-frameworks.html), Udo Thönnissen
+
 
 ### Rhino
 
