@@ -1,4 +1,4 @@
-![Poster](/.static/cai-banner_fs25.jpg)
+![Poster](/.static/caii-banner_fs25.jpg)
 
 # Coding Architecture II: FS25
 
@@ -21,7 +21,7 @@ The central platform for all course content is [Moodle](https://moodle-app2.let.
 
 ## Lectures
 
-* [Week 01](/lectures/week-01/README.md) | [Ungraded assignment](assignments/A00-ungraded-assignment/README.md)
+* [Week 01](/lectures/week-01/README.md) | [A00 (ungraded)](assignments/a00-ungraded-assignment/README.md)
 
 ## Roadmap
 
