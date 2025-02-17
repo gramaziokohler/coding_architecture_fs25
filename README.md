@@ -64,8 +64,7 @@ We have compiled a list of essential links and resources to support your learnin
 
 - [COMPAS Docs](https://compas.dev/compas/2.9.1)
 - [COMPAS API Reference](https://compas.dev/compas/2.9.1/api/index.html)
-
-
+- [COMPAS Timber documentation](https://gramaziokohler.github.io/compas_timber/latest/)
 
 ### Books
 
