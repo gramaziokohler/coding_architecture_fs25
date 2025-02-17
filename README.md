@@ -43,7 +43,7 @@ We have compiled a list of essential links and resources to support your learnin
 
 - [Python 3.9 Reference](https://docs.python.org/3.9/)
 - [Python Roadmap](https://roadmap.sh/python)
-- [Python Cheat Sheet](https://learnxinyminutes.com/docs/pythonlegacy/)
+- [Python Cheat Sheet](https://learnxinyminutes.com/docs)
 
 ### COMPAS
 
