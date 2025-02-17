@@ -11,6 +11,8 @@ Materials for the "Coding Architecture II", Spring Semester 2025.
 > **and exploring the programmability of our world**<br>
 > through powerful methods of digital, computational, and algorithmic design.
 
+In the spring semester, we dive into digital timber using the `compas_timber` library to design reciprocal frame structures and materialize them.
+
 ## Getting started
 
 See [here](/getting-started/README.md) for details about software requirements and installation of the tools.
