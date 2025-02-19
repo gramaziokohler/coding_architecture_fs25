@@ -38,4 +38,4 @@ Install a new conda environment:
 
 Click [here](https://youtu.be/AfSPShslrIQ) to watch the installation guide video:
 
-[![Watch the installation guide](https://img.youtube.com/vi/AfSPShslrIQ/maxresdefault.jpg)](https://youtu.be/AfSPShslrIQ)
+[![Watch the installation guide](video_thumbnail.png)](https://youtu.be/AfSPShslrIQ)
