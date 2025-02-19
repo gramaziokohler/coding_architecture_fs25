@@ -17,7 +17,7 @@ Once that is done, follow the step-by-step instructions of the video below to in
 The installation on Rhino 8 is significantly simpler nowadays. Just copy&paste the following code snippet in a `Python 3 script` component in Grasshopper:
 
 ```python
-# r: compas>=2.9
+# r: compas>=2.9,compas_timber>=0.13
 # venv: ca_fs25
 
 import compas
