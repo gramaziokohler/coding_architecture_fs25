@@ -23,7 +23,7 @@ The central platform for all course content is [Moodle](https://moodle-app2.let.
 
 ## Lectures
 
-* [Week 01](/lectures/week-01/README.md) | [A00 (ungraded)](assignments/a00-ungraded-assignment/README.md)
+* [Week 01](/lectures/week-01/README.md) | [Ungraded assignment A00](assignments/a00-ungraded-assignment/README.md)
 
 ## Roadmap
 
@@ -34,7 +34,7 @@ to move forward.
 
 ## Teaching Material
 
-We have compiled a list of essential links and resources to support your learning throughout the semester. These materials cover foundational topics in programming, computational geometry, visual programming, Rhino, and Grasshopper. You will also find API references that include the methods, classes, and functions needed for your assignments and projects. Additionally, we've included a selection of books and other resources to help you deepen your understanding of the course topics. These resources are intended to provide you with the necessary tools and information as you progress through the course.
+We have compiled a list of essential links and resources to support your learning throughout the semester. These materials cover foundational topics in reciprocal frame structures, and reference material in programming, computational geometry and COMPAS framework.
 
 ### Foundational Material
 

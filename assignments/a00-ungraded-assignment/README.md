@@ -21,7 +21,7 @@ A simple reciprocal frame unit with:
 - Proper joints at intersections
 - Visualization in Rhino
 
-![Reciprocal Frame in Grasshopper](expected_output.png)
+![Reciprocal Frame in Grasshopper](a00-output.png)
 
 ### Resources
 
