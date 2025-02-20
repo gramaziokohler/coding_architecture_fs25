@@ -24,7 +24,7 @@ The central platform for all course content is [Moodle](https://moodle-app2.let.
 ## Lectures
 
 * Week 00: [📽️ Python Refresher video](https://youtu.be/RVdyx8F6A0c)
-* Week 01: [📈 Slides](...) | [📚 Ungraded assignment A00](assignments/a00-ungraded-assignment/README.md)
+* Week 01: [📈 Slides](https://docs.google.com/presentation/d/1cbTAJc6vR77pnhw-S01tRpVLTFPxmK5lytFPltN9AxE/edit) | [📚 Ungraded assignment A00](assignments/a00-ungraded-assignment/README.md)
 
 ## Roadmap
 
