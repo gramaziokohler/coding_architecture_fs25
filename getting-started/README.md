@@ -39,3 +39,7 @@ Install a new conda environment:
 Click [here](https://youtu.be/AfSPShslrIQ) to watch the installation guide video:
 
 [![Watch the installation guide](video_thumbnail.png)](https://youtu.be/AfSPShslrIQ)
+
+## Code Reloading
+
+For a guide on code reloading, see [here](./code-reloading/README.md).
