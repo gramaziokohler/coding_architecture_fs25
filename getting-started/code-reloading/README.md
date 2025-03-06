@@ -33,7 +33,7 @@ Follow these steps to create a development workflow between VS Code and Grasshop
    - Save your Grasshopper project as a .ghx file in a directory of your choice (e.g. `code_reloading.ghx`)
 
 3. **Create Your Python Class File**
-   - In the same directory as your .ghx file, create a new .py file (e.g., `example_module.py` or `my-custom-class.py`)
+   - In the same directory as your .ghx file, create a new .py file (e.g., `example_module.py` or `my_custom_class.py`)
    - Open this file in VS Code to write your class implementations
    - VS Code will provide syntax highlighting, code completion, and other helpful features
 
@@ -53,7 +53,7 @@ Follow these steps to create a development workflow between VS Code and Grasshop
         from compas_rhino import DevTools
         DevTools.ensure_path()
 
-        from code_reloading import House
+        from example_module import House
         ```
    - Interact with your class
         ```python

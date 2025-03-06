@@ -13,35 +13,4 @@ class House:
 
     def __str__(self):
         return f"House(name={self.name}, area={self.area}, rectangle={self.rectangle})"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
