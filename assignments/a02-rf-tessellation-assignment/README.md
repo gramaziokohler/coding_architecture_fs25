@@ -2,7 +2,7 @@
 
 > Goal: Create a Reciprocal Frame Tessellation (`RFTessellation`) class that allows to arrange/combine multiple units (`RFUnit` instances) in a congruent tiling layout following one or more grammar rules (`RFGrammarRule` instances).
 
-Your starting point is the [`a02_rftessellation.ghx`](a02_rftessellation.ghx) file that contains some components and comments for line-by-line guidance. This line-by-line guidance can be ignored if desired to implement in a different way.
+Your starting point is the [`a02_tessellation.ghx`](a02_tessellation.ghx) file that contains some components and comments for line-by-line guidance. This line-by-line guidance can be ignored if desired to implement in a different way.
 
 ![a02-tessellation](./_images/a02-tessellation.png)
 
