@@ -41,7 +41,7 @@ One zip file [`mustermann_max_A-03.zip`] containing:
 
 - Grasshopper File (`.ghx`):
   - File Name: `mustermann_max_A-03.ghx`
-  - Optionally, a python file `a02_tessellation_solution.py` containing the solution if you choose to use VS Code.
+  - Optionally, a python file `a03_lift_solution.py` containing the solution if you choose to use VS Code.
 - Screenshots (`.png`):
   - File Name: `mustermann_max_A-03_xx.png`
   - Dimensions: 3200x2400 px
