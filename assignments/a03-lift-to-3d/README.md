@@ -22,7 +22,7 @@ Both files contain the markers `[..ADD YOUR CODE HERE..]` to indicate where you 
 - Write an algorithm to determine how many stock beams (each has a length of 5m) are required to build the structure. Minimize the waste by packing as many beams as possible in each stock beam, this also determines how each stock beam will be cut.
 - Once you have determined how to cut the stock beams into your structure's beams, you can now visualize the beams, as well as, the stock beams, laying them out on a surface.
 - Bonus: assume a gap/buffer between each beam to ensure they can be cut correctly. 
-- Topics: 
+- Topics: Packing, Trackers.
 
 ![a03-challenge-01](./_images/a03-challenge-01.png)
 
@@ -31,7 +31,7 @@ Both files contain the markers `[..ADD YOUR CODE HERE..]` to indicate where you 
 - Add the possiblity of using an attractor point or curve to control local parameters of the tessellation.
 - For example, alter the start eccentricity of units based on the distance between their centroids and the attractor point/curve.
 - Bonus: detect units on the boundary and apply a local effect on them (e.g. set eccentricity to zero).
-- Topics: attractors
+- Topics: Attractors
 
 ![a03-challenge-02](./_images/a03-challenge-02.png)
 
