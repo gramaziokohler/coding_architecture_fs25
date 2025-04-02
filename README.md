@@ -29,6 +29,8 @@ The central platform for all course content is [Moodle](https://moodle-app2.let.
 * Week 03: [📈 Slides](https://docs.google.com/presentation/d/11TjXN8BwUkJBon0y1OvV7fGPwDbvNNXt6LQT8zj7MC0/edit) | [🧑‍💻 Code example](./exercises/03-grammar_rules/)
 * Week 04: [📈 Slides](https://docs.google.com/presentation/d/13BH8bEZQNpeh6G4lwh9R4uzb-mRF5vuJ1lURwlhrjgw/edit) | [📚 Assignment A02](assignments/a02-rf-tessellation-assignment/README.md)
 * Week 06: [📈 Slides](https://docs.google.com/presentation/d/1My2CK5X3-_p5ynHjw82skijRPx9mQLBOMnxF32zc7WI/edit?slide=id.g343f52e6322_0_0) | [📚 Assignment A01+A02 review](solutions/assignment-02-and-01/) | [📚 Assignment A03](assignments/a03-lift-to-3d/README.md)
+* Week 07: [📈 Slides](https://docs.google.com/presentation/d/1WMA4GQNTwXEEZkZilNjgBFNuwjMORaeAr2Gm31haSWA/edit?usp=sharing)
+
 
 ## Roadmap
 
