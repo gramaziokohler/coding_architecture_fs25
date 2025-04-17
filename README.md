@@ -31,6 +31,7 @@ The central platform for all course content is [Moodle](https://moodle-app2.let.
 * Week 06: [📈 Slides](https://docs.google.com/presentation/d/1My2CK5X3-_p5ynHjw82skijRPx9mQLBOMnxF32zc7WI/edit?slide=id.g343f52e6322_0_0) | [📚 Assignment A01+A02 review](solutions/assignment-02-and-01/) | [📚 Assignment A03](assignments/a03-lift-to-3d/README.md)
 * Week 07: [📈 Slides](https://docs.google.com/presentation/d/1WMA4GQNTwXEEZkZilNjgBFNuwjMORaeAr2Gm31haSWA/edit?usp=sharing)
 * Week 08: [📈 Slides](https://docs.google.com/presentation/d/1iBsmQcsQ7xoE_6MMzpPqedVKqJ6Rj3cz_5NEsJGeKjk/edit?usp=sharing) | [📚 Assignment A04: Final project](assignments/a04-final-project/README.md)
+* Week 09: [📈 Slides](https://docs.google.com/presentation/d/1CWVQ8yhTGHiFh0gOYdpBGjmr0n_FXvFCgo-m0BzxbXE/edit?usp=sharing)
 
 
 ## Roadmap
