@@ -1,3 +1,4 @@
+import copy
 import math
 from typing import Iterator
 
@@ -383,7 +384,7 @@ class RFTessellation:
 
     def copy(self) -> "RFTessellation":
         copied = RFTessellation(self.vertex_configuration[:])
-        copied.graph = self.graph.copy()
+        copied.graph = copy.deepcopy(self.graph)
         return copied
 
     @property
@@ -727,17 +728,13 @@ class RFTessellation:
         target_face =  target_brep.faces[0]
         source_surface =  source_face.nurbssurface
         target_surface =  target_face.nurbssurface
+        target_native_face = target_brep.faces[0].native_face
 
-        tesselation = self   #.copy()
+        tesselation = self.copy()
 
         to_delete = []
         for unit in tesselation.units:
-            # Make units outside the source brep connect all beams at the centroid
-            # (basically removing start eccentricity without regenerating segments)
-            if not is_unit_on_brepface(source_face, unit, 0.015):
-                for segment in unit.segments:
-                    segment.start = Point(*unit.centroid)
-
+            if not is_unit_on_brepface(source_face, unit, tolerance):
                 to_delete.append(unit.key)
                 continue
 
@@ -754,47 +751,69 @@ class RFTessellation:
                 segment.start = map_point_to_target(segment.start, source_surface, target_surface)
                 segment.end = map_point_to_target(segment.end, source_surface, target_surface)
 
-                mapped_start = map_point_to_target_brep(segment.start, source_brep, target_brep)
-                mapped_end = map_point_to_target_brep(segment.end, source_brep, target_brep)
+                mapped_start = map_point_to_target_face_fast(segment.start, source_surface, target_native_face)
+                mapped_end = map_point_to_target_face_fast(segment.end, source_surface, target_native_face)
 
                 start_inside = is_point_on_brepface(target_face, mapped_start, tolerance)
                 end_inside = is_point_on_brepface(target_face, mapped_end, tolerance)
 
+                # Found segment fully outside the boundary, leave them out
+                # Otherwise they would end up squeezed on the edges of the target surface
                 if not start_inside and not end_inside:
-                    print("Found segment fully outside the boundary, leave them out")
                     continue
 
                 segment.start = mapped_start
                 segment.end = mapped_end
 
+        for rod in tesselation.rods:
+            # if rod.segment2 is not None:
+            start_inside = is_point_on_brepface(target_face, rod.line.start, tolerance)
+            end_inside = is_point_on_brepface(target_face, rod.line.end, tolerance)
 
-        for rod in self.rods:
-            if rod.segment2 is not None:
-                start_inside = is_point_on_brepface(target_face, rod.line.start, tolerance)
-                end_inside = is_point_on_brepface(target_face, rod.line.end, tolerance)
-
-                # Both sides are outside, we need to remove the link to this rod from its segments
-                if not start_inside and not end_inside:
-                    rod.segment1.rod = None
+            # Both sides are outside, we need to remove the link to this rod from its segments
+            if not start_inside and not end_inside:
+                rod.segment1.rod = None
+                if rod.segment2:
                     rod.segment2.rod = None
+            elif (start_inside and not end_inside) or (end_inside and not start_inside):
+                seg1_start_inside = is_point_on_brepface(target_face, rod.segment1.start, tolerance)
+                seg1_end_inside = is_point_on_brepface(target_face, rod.segment1.end, tolerance)
 
-                # One of the two sides of the rod is outside, we need to remove the second segment
-                if not (start_inside and end_inside):
+                if not seg1_start_inside and not seg1_end_inside:
+                    # Segment 1 is fully out, swap and remove link to rod
+                    rod.segment1 = rod.segment2
+                    rod.segment2.rod = None
                     rod.segment2 = None
+
+                if rod.segment2:
+                    seg2_start_inside = is_point_on_brepface(target_face, rod.segment2.start, tolerance)
+                    seg2_end_inside = is_point_on_brepface(target_face, rod.segment2.end, tolerance)
+
+                    if not seg2_start_inside and not seg2_end_inside:
+                        # Segment 2 is fully out, remove link to rod
+                        rod.segment2.rod = None
+                        rod.segment2 = None
+
+                # # One of the two sides of the rod is outside, we need to remove the second segment
+                # if not start_inside and end_inside:
+                #     rod.segment1 = rod.segment2
+                #     rod.segment2 = None
+                # if start_inside and not end_inside:
+                #     rod.segment2 = None
+
+        for key in to_delete:
+            tesselation.graph.delete_node(key)
 
         # Re-assign xyz to graph nodes
         for unit in tesselation.units:
             tesselation.graph.node_attributes(unit.key, "xyz", list(unit.centroid))
 
-        for key in to_delete:
-            tesselation.graph.delete_node(key)
-        
         return tesselation
 
 
-def map_point_to_target_brep(point, source_brep, target_brep):
-    _closest, (u, v) = source_brep.faces[0].nurbssurface.closest_point(point, return_parameters=True)
-    pt = target_brep.faces[0].native_face.PointAt(u, v)
+def map_point_to_target_face_fast(point, source_surface, target_face):
+    _closest, (u, v) = source_surface.closest_point(point, return_parameters=True)
+    pt = target_face.PointAt(u, v)
     return Point(pt.X, pt.Y, pt.Z)
 
 
@@ -806,6 +825,7 @@ def map_point_to_target(point, source_surface, target_surface):
 def is_point_on_brepface(brepface, point, tolerance):
     closest, (u, v) = brepface.nurbssurface.closest_point(point, return_parameters=True)
     return closest.distance_to_point(point) < tolerance and int(brepface.native_face.IsPointOnFace(u, v)) == 1
+
 
 def is_unit_on_brepface(source_face, unit, tolerance):
     return any([is_point_on_brepface(source_face, point, tolerance) for point in unit.shape.points])
@@ -1079,4 +1099,3 @@ def add_beams_to_ctmodel(model, custom_lines):
     return geometry
 
     
-
